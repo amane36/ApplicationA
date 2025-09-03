@@ -1,5 +1,6 @@
 package jp.ac.meijou.android.s241205006;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -24,6 +25,21 @@ public class MainActivity4 extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        var edittext = getIntent().getStringExtra("title");
+        binding.textView4.setText(edittext);
+
+        binding.buttonok.setOnClickListener(view -> {
+            var intent = new Intent();
+            intent.putExtra("result", "OK");
+            setResult(RESULT_OK, intent);
+            finish();
+        });
+
+        binding.buttoncancel.setOnClickListener(view -> {
+            setResult(RESULT_CANCELED);
+            finish();
         });
     }
 }
