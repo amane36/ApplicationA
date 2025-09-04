@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity7">
+
+    <TextView
+        android:id="@+id/textViewpriority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginStart="10dp"
+        android:text="優先"
+        app:layout_constraintEnd_toStartOf="@+id/textViewwifi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewwifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="220dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textViewpriority"
+        app:layout_constraintTop_toTopOf="@+id/textViewpriority" />
+
+    <TextView
+        android:id="@+id/textViewip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IPアドレス"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@+id/textViewpriority"
+        app:layout_constraintTop_toBottomOf="@+id/textViewpriority" />
+
+    <TextView
+        android:id="@+id/textViewip2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@+id/textViewip"
+        app:layout_constraintTop_toBottomOf="@+id/textViewip" />
+</androidx.constraintlayout.widget.ConstraintLayout>
